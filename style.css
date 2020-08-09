@@ -888,13 +888,12 @@ RESPONSIVE
     display: block;
     padding: 0 5px;
     width: 140px;
-    /*transform: translateX(0px);*/
   }
 
   .main .header .nav ul li:last-child {
     padding-top: 5px;
     width: 160px;
-    overflow-x: hidden;
+    overflow-x: inherit;
   }
 
   .main .header .nav ul li.active,
