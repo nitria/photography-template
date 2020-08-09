@@ -1,0 +1,1245 @@
+* {
+  scroll-behavior: smooth;
+}
+
+@font-face {
+  src: url("fonts/NEXT\ ART_Light.otf");
+  font-family: "NEXT ART_Light";
+}
+
+@font-face {
+  src: url("fonts/Brushwell.ttf");
+  font-family: "Brushwell";
+}
+
+@font-face {
+  src: url("fonts/Louis\ George\ Cafe.ttf");
+  font-family: "LouisGeorgeCafe";
+}
+
+@font-face {
+  src: url("fonts/RedVelvet-Regular.otf");
+  font-family: "RedVelvet";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.main .header {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  z-index: 111111;
+}
+
+.main .header .nav {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.main .header .nav .bars {
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.bars span {
+  display: flex;
+  width: 30px;
+  height: 3px;
+  margin: 2px 0;
+  background: white;
+  position: relative;
+  float: right;
+}
+
+.bars span:nth-child(2) {
+  width: 20px;
+}
+
+.navbar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin: 0;
+  position: fixed;
+  padding: 0;
+  background: #1b1b1b;
+  width: 50%;
+  height: 100vh;
+  left: -100%;
+  transition: left 0.8s ease-in-out;
+}
+
+.open {
+  left: 0px;
+}
+
+.main .header .nav ul li {
+  list-style: none;
+  padding: 8px;
+  transition: all 0.3s ease-in-out;
+}
+
+.main .header .nav ul li:hover {
+  background: #39262b;
+}
+
+.main .header .nav ul li:last-child {
+  padding: 0 8px;
+  display: flex;
+  height: 25px;
+}
+
+.main .header .nav ul li i {
+  font-size: 1.2em;
+  margin: auto;
+  width: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.main .header .nav ul li input {
+  width: 80%;
+  float: left;
+  border-radius: 10px;
+  border: none;
+  height: 100%;
+}
+
+.main .header .nav ul li a {
+  color: #fff;
+  font-size: 1em;
+  text-decoration: none;
+  font-family: NEXT ART_Light;
+  width: 100%;
+  display: block;
+}
+
+.main .home {
+  background: url("images/home_bg.jpg") no-repeat center center / cover;
+  color: #fff;
+  position: relative;
+  padding: 0 0 20px;
+  height: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+
+.main .home .logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-top: 100px;
+}
+
+.main .home .logo img {
+  width: 50px;
+  height: 50px;
+}
+
+.logo h1 {
+  font-family: Brushwell;
+  margin: 0;
+  border-bottom: 1px solid #fff;
+  padding: 0 0 8px;
+}
+
+.banner {
+  text-align: center;
+  width: 220px;
+  margin: 0 auto 40px;
+}
+
+.banner h2 {
+  font-size: 1em;
+  width: max-content;
+  font-family: RedVelvet;
+}
+
+.banner h3 {
+  font-size: 0.7em;
+  width: 100%;
+  font-family: LouisGeorgeCafe;
+  line-height: 18px;
+  height: 50px;
+  overflow: hidden;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.pagination span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #929191;
+  margin: 0 2px;
+}
+
+.pagination span.active {
+  background: #fff;
+}
+
+.social {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translate(0%, -50%);
+}
+
+.social ul {
+  padding: 0;
+  margin: 8px;
+}
+
+.social ul li {
+  list-style: none;
+  padding: 8px 0;
+}
+
+.social ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.6em;
+}
+
+/**********
+ABOUT
+**********/
+
+.about {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 50px 0;
+}
+
+.about .img {
+  position: relative;
+  max-width: 300px;
+  max-height: 300px;
+  margin: 20px auto;
+}
+
+.about .img img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+}
+
+.about .aboutme {
+  text-align: center;
+}
+
+.about .aboutme h3 {
+  font-family: Brushwell;
+  font-size: 2em;
+}
+
+.about .aboutme h4 {
+  font-family: LouisGeorgeCafe;
+  font-size: 0.9em;
+  max-width: 520px;
+  padding-bottom: 30px;
+}
+
+.about .aboutme a {
+  text-decoration: none;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  text-transform: uppercase;
+  color: #000;
+  font-family: LouisGeorgeCafe;
+  font-size: 0.9em;
+  margin: 10px 0;
+}
+
+/*********
+PORTFOLIO
+*********/
+.portfolio {
+  background: url("images/portfolio-bg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 80px 0;
+}
+
+.portfolio img {
+  display: none;
+}
+
+.portfolio h1 {
+  font-family: Brushwell;
+  margin: 0;
+  font-size: 3rem;
+}
+
+.portfolio h2 {
+  text-decoration: underline;
+  font-family: RedVelvet;
+  color: #fff;
+  margin: 8px 0;
+  font-size: 2rem;
+}
+
+.portfolio h3 {
+  color: #373737;
+  font-family: RedVelvet;
+  font-size: 0.7em;
+  letter-spacing: 1px;
+  margin: 8px 0;
+}
+
+.portfolio a {
+  border: 1px solid #000;
+  color: #000;
+  font-size: 0.9em;
+  padding: 5px 10px;
+  text-decoration: none;
+  font-family: LouisGeorgeCafe;
+  margin-top: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/*********
+BLOG
+*********/
+
+.blog {
+  max-width: 1600px;
+  width: 100%;
+  margin: 50px auto;
+}
+
+.gallery {
+  position: relative;
+  grid-template-columns: repeat(auto-fill, minmax(50%, 4fr));
+  grid-template-rows: minmax(200px, 300px);
+}
+
+.gallery .img-box {
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .img-box img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 100%;
+}
+
+.pagination {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.pagination span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ab9e98;
+  margin: 10px 2px;
+}
+
+.pagination span.active {
+  background: #605454;
+}
+
+/*********
+VIDEO
+**********/
+.videosection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.videosection .title {
+  background: url("images/video-bg.jpg") no-repeat center;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100vw;
+  padding: 80px 0;
+}
+
+.title .flowers {
+  display: none;
+}
+
+.videosection .title h1 {
+  font-family: RedVelvet;
+  color: #fff;
+  letter-spacing: 1px;
+  font-size: 2rem;
+  position: relative;
+  border-bottom: 1px solid #fff;
+  padding-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.videosection .title p {
+  color: #2b2b2b;
+  font-family: RedVelvet;
+  font-size: 0.7rem;
+  text-align: center;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.videosection .videos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 20px auto;
+}
+
+.videosection .videos .mainvideo {
+  width: 100%;
+}
+.mainvideo .mainvideo-video {
+  position: relative;
+  cursor: pointer;
+}
+
+.mainvideo .mainvideo-video .video {
+  width: 100%;
+}
+
+.mainvideo .mainvideo-video .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  max-width: 80px;
+  max-height: 70px;
+  transform: translate(-50%, -50%);
+}
+
+.mainvideo .mainvideo-video .playicon {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.videosection .videos .mainvideo p,
+.videosection .videos .thumbnails p {
+  font-family: LouisGeorgeCafe;
+  font-size: 0.8rem;
+  position: relative;
+  margin-top: 10px;
+  padding-top: 10px;
+}
+
+.videosection .videos .mainvideo p::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 15px;
+  height: 1px;
+  background: #000;
+  transform: translate(-50%, -50%);
+}
+
+.videosection .videos .thumbnails {
+  margin: 20px auto 0;
+}
+
+.videosection .videos .thumbnails div {
+  width: 70%;
+  margin: 10px auto 50px;
+}
+
+.videosection .videos .thumbnails img {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.videosection .videos .thumbnails p {
+  padding-top: 0;
+}
+
+.videosection a {
+  font-family: LouisGeorgeCafe;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: #1b1b1b;
+  text-transform: uppercase;
+}
+
+/*************
+TESTIMONIALS
+*************/
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  border-top: 1px solid #000;
+}
+
+.testimonials .title {
+  text-align: center;
+  margin: 20px 0 100px;
+}
+
+.testimonials .title h1 {
+  font-family: Brushwell;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+  font-size: 2rem;
+}
+
+.testimonials .title h2 {
+  font-family: LouisGeorgeCafe;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  font-weight: normal;
+}
+
+.cards {
+  margin: 40px auto 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.cards .card {
+  border: 1px solid #000;
+  text-align: center;
+  position: relative;
+  margin: 100px auto;
+  padding: 80px 10px 20px;
+}
+
+.cards .card:last-child {
+  margin-bottom: 20px;
+}
+
+.cards .card .img {
+  width: 200px;
+  height: 200px;
+  position: absolute;
+  top: -13%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.cards .card .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.cards .card .testimonial {
+  height: 100%;
+}
+
+.cards .card .testimonial h3 {
+  font-family: RedVelvet;
+  font-weight: normal;
+  margin-bottom: 20px;
+}
+
+.cards .card .testimonial p {
+  line-height: 25px;
+  font-family: LouisGeorgeCafe;
+}
+
+.testimonials a {
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid #000;
+  padding: 5px 15px;
+  font-family: LouisGeorgeCafe;
+  letter-spacing: 1px;
+  color: #1b1b1b;
+}
+
+/*************
+CONTACT
+*************/
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: url("images/contact_BG.png") no-repeat center;
+  background-size: cover;
+  margin-top: 20px;
+}
+
+.contact .title {
+  text-align: center;
+  width: 90%;
+  border-bottom: 1px solid #000;
+  padding: 20px 0;
+}
+
+.contact .title h1 {
+  font-family: Brushwell;
+  font-weight: normal;
+  font-size: 2rem;
+}
+
+.contact .title h2 {
+  font-family: LouisGeorgeCafe;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+.contact .contact-form {
+  width: 90%;
+  margin: 20px auto;
+}
+
+.contact .contact-form .inputs {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.contact .contact-form .inputs h3 {
+  font-size: 0.8rem;
+  font-weight: normal;
+  font-family: LouisGeorgeCafe;
+  line-height: 20px;
+}
+
+.contact .contact-form .inputs div {
+  display: flex;
+  flex-direction: column;
+  padding-top: 10px;
+  width: 100%;
+}
+
+.contact .contact-form .inputs div label {
+  font-family: LouisGeorgeCafe;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+}
+
+.contact-form .inputs div input {
+  background: transparent;
+  outline: none;
+  border: 1px solid #373737;
+  height: 30px;
+}
+
+.contact-form .inputs div .message {
+  height: 100px;
+}
+
+.contact-form .img {
+  width: 60%;
+  margin: 20px auto 0;
+}
+
+.contact-form .img img {
+  width: 100%;
+  height: 100%;
+}
+
+/*************
+FOOTER
+*************/
+.footer {
+  background: url(images/footer.jpg) no-repeat center;
+  background-size: cover;
+}
+
+.footer nav {
+  width: 100%;
+}
+
+.footer nav ul {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.footer nav ul li {
+  list-style: none;
+  padding: 8px 0;
+  text-align: center;
+}
+
+.footer nav ul li a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+  font-family: LouisGeorgeCafe;
+}
+
+.footer nav ul li:hover a:hover,
+.footer nav ul li:hover i {
+  color: rgba(255, 255, 255, 1);
+}
+
+.footer nav ul li i {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.footer .footer_social {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.footer .footer_social ul {
+  display: flex;
+  justify-content: center;
+}
+
+.footer .footer_social ul li {
+  list-style: none;
+  padding: 0 8px;
+}
+
+.footer .footer_social ul li a {
+  text-decoration: none;
+}
+
+.footer .footer_social ul li a i {
+  color: #fff;
+  opacity: 0.5;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .footer_social ul li.active a i,
+.footer .footer_social ul li:hover a i {
+  opacity: 1;
+}
+
+.footer p {
+  width: 90%;
+  text-align: center;
+  margin: 20px auto;
+  color: #fff;
+  font-family: LouisGeorgeCafe;
+  font-size: 0.8rem;
+  line-height: 20px;
+}
+
+.footer .copyright {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 8px;
+  font-size: 0.8rem;
+  font-family: LouisGeorgeCafe;
+}
+.footer .copyright a {
+  text-decoration: none;
+  color: #fff;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer .copyright a:hover {
+  color: #d46a8a;
+}
+/*************
+RESPONSIVE
+*************/
+@media (min-width: 530px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: 200px;
+    gap: 15px;
+    display: grid;
+    width: 100%;
+  }
+
+  .gallery .img-box {
+    height: 100%;
+  }
+
+  .gallery .img-box:nth-child(4) img {
+    object-position: bottom;
+  }
+
+  .gallery .img-box:nth-child(1) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(2) {
+    grid-row: span 1;
+  }
+
+  .gallery .img-box:nth-child(3) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(4) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(5) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(6) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(7) {
+    grid-row: span 2;
+  }
+}
+
+@media (min-width: 991px) {
+  .main .header {
+    margin-top: 60px;
+    height: 40px;
+  }
+  .main .header .nav {
+    height: 100%;
+  }
+  .main .header .nav .bars {
+    display: none;
+  }
+
+  .navbar {
+    position: relative;
+    width: 69%;
+    left: 0;
+    margin: auto;
+    background: transparent;
+    flex-direction: row;
+    height: 100%;
+  }
+
+  .main .header .nav ul li input {
+    height: 25px;
+    margin: 0 8px 0 0;
+    width: 0px;
+    position: absolute;
+    right: 20px;
+    transition: 0.5s ease-in-out;
+  }
+
+  .main .header .nav ul li i {
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    top: 4px;
+  }
+
+  .main .header .nav ul li {
+    position: relative;
+  }
+
+  .main .header .nav ul li:hover input,
+  .main .header .nav ul li input:focus {
+    display: block;
+    padding: 0 5px;
+    width: 140px;
+    /*transform: translateX(0px);*/
+  }
+
+  .main .header .nav ul li:last-child {
+    padding-top: 5px;
+    width: 160px;
+    overflow-x: hidden;
+  }
+
+  .main .header .nav ul li.active,
+  .main .header .nav ul li:hover {
+    background: transparent;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0;
+  }
+
+  .main .header .nav ul li:last-child:hover {
+    border: none;
+  }
+
+  .main .home {
+    height: 90vh;
+    justify-content: center;
+  }
+
+  .main .home .logo {
+    padding-top: 0;
+  }
+
+  .main .home .logo img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .main .home .logo h1 {
+    font-size: 4.74em;
+  }
+
+  .banner {
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .banner h2 {
+    font-size: 4.18em;
+    width: 100%;
+    letter-spacing: 1px;
+    font-weight: normal;
+  }
+
+  .banner h3 {
+    font-size: 1.17em;
+    width: 49%;
+    overflow: visible;
+    margin: 60px auto;
+    line-height: 30px;
+    font-weight: normal;
+  }
+
+  .home .pagination {
+    position: absolute;
+    bottom: 50px;
+  }
+
+  .social {
+    right: 20px;
+  }
+
+  .social ul li {
+    padding: 15px 0;
+  }
+
+  .social ul li a i {
+    font-size: 1.5rem;
+  }
+
+  .about {
+    flex-direction: row;
+    justify-content: space-between;
+    height: 530px;
+  }
+
+  .about .img {
+    width: 40%;
+    margin-right: 40px;
+  }
+
+  .about .aboutme {
+    text-align: left;
+    width: 60%;
+    border-left: 1px solid #000;
+    padding: 20px;
+  }
+
+  .about .aboutme h3 {
+    font-size: 4em;
+    font-weight: normal;
+    letter-spacing: 4px;
+  }
+
+  .about .aboutme h4 {
+    font-size: 1em;
+    line-height: 30px;
+    font-weight: normal;
+  }
+
+  .portfolio {
+    height: 414px;
+  }
+
+  .portfolio img {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .portfolio h1 {
+    font-size: 5rem;
+    font-weight: normal;
+    letter-spacing: 4px;
+  }
+
+  .portfolio h2 {
+    font-size: 5rem;
+    font-weight: normal;
+  }
+
+  .portfolio h3 {
+    font-size: 2em;
+    font-weight: normal;
+    letter-spacing: 1px;
+  }
+
+  .portfolio a {
+    font-size: 1.2em;
+    padding: 5px 40px;
+    margin-top: 50px;
+    letter-spacing: 1px;
+    position: absolute;
+    bottom: 30px;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: 200px;
+    gap: 15px;
+    display: grid;
+    width: 100%;
+  }
+
+  .gallery .img-box:nth-child(4) img {
+    object-position: bottom;
+  }
+
+  .gallery .img-box:nth-child(1) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(2) {
+    grid-row: span 1;
+  }
+
+  .gallery .img-box:nth-child(3) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(4) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(5) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(6) {
+    grid-row: span 3;
+  }
+
+  .gallery .img-box:nth-child(7) {
+    grid-row: span 2;
+  }
+
+  .blog .pagination {
+    margin-top: 20px;
+  }
+
+  .videosection .title {
+    height: 416px;
+    padding: 0;
+  }
+
+  .title .flowers {
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .videosection .title h1 {
+    font-size: 4rem;
+    font-weight: normal;
+  }
+
+  .videosection .title p {
+    font-size: 1.5rem;
+    width: 60%;
+    font-weight: normal;
+    line-height: 40px;
+  }
+
+  .videosection .videos {
+    margin: 60px auto 0;
+  }
+
+  .videosection .videos .mainvideo {
+    width: 60%;
+  }
+
+  .videosection .videos .mainvideo p,
+  .videosection .videos .thumbnails p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 30px;
+  }
+
+  .videosection .videos .thumbnails {
+    display: flex;
+  }
+
+  .videosection .videos .thumbnails div {
+    margin: 10px 20px 50px;
+  }
+
+  .videosection .videos .thumbnails p {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .testimonials {
+    margin-bottom: 40px;
+  }
+
+  .testimonials .title h1 {
+    font-size: 4rem;
+    font-weight: normal;
+  }
+
+  .testimonials .title h2 {
+    font-size: 2.2rem;
+  }
+
+  .cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 60px;
+  }
+
+  .cards .card {
+    width: 330px;
+    height: 410px;
+    margin-bottom: 0;
+    padding: 0 30px 20px;
+  }
+
+  .cards .card .img {
+    top: -35px;
+  }
+
+  .cards .card .testimonial {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    flex-direction: column;
+  }
+
+  .cards .card .testimonial p {
+    font-size: 1.2em;
+    line-height: 35px;
+  }
+
+  .contact {
+    padding-bottom: 20px;
+  }
+
+  .contact .title {
+    width: 716px;
+  }
+
+  .contact .title h1 {
+    font-size: 4rem;
+  }
+
+  .contact .title h2 {
+    font-size: 2.1rem;
+    letter-spacing: 2px;
+  }
+
+  .contact .contact-form {
+    width: 716px;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .contact .contact-form .inputs {
+    padding: 20px;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .contact .contact-form .inputs h3 {
+    font-size: 1.1rem;
+    line-height: 30px;
+  }
+
+  .contact .contact-form .inputs div label {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+
+  .contact-form .inputs div input {
+    height: 50px;
+  }
+
+  .contact-form .img {
+    width: 340px;
+    margin-bottom: 20px;
+    height: 500px;
+  }
+
+  .footer {
+    padding: 60px 0 20px;
+  }
+
+  .footer nav ul {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+  }
+
+  .footer .footer_social ul li {
+    padding: 10px 15px;
+  }
+
+  .footer p {
+    width: 540px;
+  }
+}
