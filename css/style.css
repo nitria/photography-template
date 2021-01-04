@@ -1,20 +1,20 @@
 @font-face {
-  src: url("../fonts/NEXT ART_Light.otf");
+  src: url("./fonts/NEXT ART_Light.otf");
   font-family: "NEXT ART_Light";
 }
 
 @font-face {
-  src: url("../fonts/Brushwell.ttf");
+  src: url("./fonts/Brushwell.ttf");
   font-family: "Brushwell";
 }
 
 @font-face {
-  src: url("../fonts/Louis George Cafe.ttf");
+  src: url("./fonts/Louis George Cafe.ttf");
   font-family: "LouisGeorgeCafe";
 }
 
 @font-face {
-  src: url("../fonts/RedVelvet-Regular.otf");
+  src: url("./fonts/RedVelvet-Regular.otf");
   font-family: "RedVelvet";
 }
 
@@ -179,7 +179,7 @@ body {
 }
 
 .main .home {
-  background: url("./images/home_bg.jpg") no-repeat center center/cover;
+  background: url("../images/home_bg.jpg") no-repeat center center/cover;
   color: #fff;
   position: relative;
   padding: 0 0 20px;
