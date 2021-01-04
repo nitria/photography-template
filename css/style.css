@@ -1,5 +1,5 @@
 @font-face {
-  src: url("/fonts/NEXT ART_Light.otf");
+  src: url("./fonts/NEXT ART_Light.otf");
   font-family: "NEXT ART_Light";
 }
 
@@ -179,7 +179,7 @@ body {
 }
 
 .main .home {
-  background: url("/images/home_bg.jpg") no-repeat center center/cover;
+  background: url("./images/home_bg.jpg") no-repeat center center/cover;
   color: #fff;
   position: relative;
   padding: 0 0 20px;
