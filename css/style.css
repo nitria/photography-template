@@ -4,17 +4,17 @@
 }
 
 @font-face {
-  src: url("/fonts/Brushwell.ttf");
+  src: url("./fonts/Brushwell.ttf");
   font-family: "Brushwell";
 }
 
 @font-face {
-  src: url("/fonts/Louis George Cafe.ttf");
+  src: url("./fonts/Louis George Cafe.ttf");
   font-family: "LouisGeorgeCafe";
 }
 
 @font-face {
-  src: url("/fonts/RedVelvet-Regular.otf");
+  src: url("./fonts/RedVelvet-Regular.otf");
   font-family: "RedVelvet";
 }
 
